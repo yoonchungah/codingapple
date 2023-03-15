@@ -1,11 +1,6 @@
-.list-group{
-  overflow: hidden;
-  max-height: 0px;
-  transition: all 2s;
-}
-.active{
-  max-height: 206px;
-
+.dark{
+  background-color: #000;
+  color: #fff;
 }
 
 
@@ -16,17 +11,17 @@
   background : rgba(0,0,0,0.5);
   z-index : 5;
   padding: 30px;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 1s;
+  /* visibility: hidden; */
+  /* opacity: 0; */
+  /* transition: opacity 1s; */
 }
 .white-bg {
-  background: white;
+  background: rgb(165, 165, 165);
   border-radius: 5px;
   padding: 30px;
 } 
 
-.black-bg.modal_show{
+/* .black-bg.modal_show{
   visibility: visible;
   opacity: 1;
-}
+} */

@@ -1,31 +1,16 @@
-let navbar = document.querySelector('.navbar-toggler');
+//badge 클릭회수가 홀수면 내부 글자를 라이트로 변경
+//badge 클릭회수가 짝수면 내부 글자를 다크로 변경
 
-navbar.addEventListener('click',function(){
-  document.querySelector('.list-group').classList.toggle('active');
-})
+//let 변수이름 = 변수에 넣을 값
 
-
-//모달창 열고 닫고
-document.querySelector('.modal_btn').addEventListener('click',function(){
-  document.querySelector('.black-bg').classList.add('modal_show');
-})
-
-document.querySelector('.btn-danger').addEventListener('click',function(){
-  document.querySelector('.black-bg').classList.remove('modal_show');
-})
-
-
-// 전송 눌렀을때 input의 입력값이 공백이면 alert 띄우기
-// 전송버튼 누를 때 입력한 비번이 6자 미만이면 알림 띄우기
-document.querySelector('form').addEventListener('submit', function(e){
-  let formId = document.getElementById('form_id').value;
-  if(formId == ''){
-    alert('아이디 값을 입력하세요');
-    e.preventDefault();
-  }
-  let formPw = document.getElementById('form_pw').value;
-  if(formPw.length < 6){
-    alert('비밀번호가 6자 미만입니다');
-    e.preventDefault();
-  }
+let conunt = 0;
+let badge = document.getElementsByClassName('badge')[0];
+badge.addEventListener('click',function(){
+  conunt++;
+  if( conunt % 2 == 0){
+    badge.innerHTML='Dark 🔄';
+  } else{
+    badge.innerHTML='Light 🔄';
+  };
+  console.log(conunt);
 })

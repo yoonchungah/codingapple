@@ -1,0 +1,11 @@
+div{
+  margin: 2% 0;
+}
+.alert-box{
+  display: none;
+  background-color: aquamarine;
+  width: 200px;
+  height: 100px;
+  border: 1px solid;
+  margin: 2% 0;
+}
